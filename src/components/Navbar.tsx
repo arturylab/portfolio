@@ -105,7 +105,10 @@ const Navbar = () => {
         onClose: () => void 
     }) => (
         <Button 
-            onClick={() => { link.onClick(); onClose(); }}  // <--- scroll + cerrar drawer
+            onClick={() => {
+                onClose(); // primero cerramos el drawer
+                setTimeout(() => link.onClick(), 50); // luego hacemos scroll
+            }}
             variant="ghost"
             w="full"
             p="3"
@@ -120,6 +123,7 @@ const Navbar = () => {
             <Text>{link.name}</Text>
         </Button>
     );
+
     
     const [scrolled, setScrolled] = useState(false);
 
