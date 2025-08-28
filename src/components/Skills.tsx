@@ -35,10 +35,26 @@ import {
   SiSlack,
   SiOllama,
   SiFigma,
+  SiMoleculer
 } from "react-icons/si";
-import { FaBrain, FaServer, FaCloud, FaDatabase, FaCode, FaTools } from "react-icons/fa";
+import { FaBrain, FaServer, FaCloud, FaDatabase, FaCode, FaTools, FaRegChartBar, FaFlask, FaAtom } from "react-icons/fa";
+import { VscAzure } from "react-icons/vsc";
 
 const skillsData = [
+    {
+      category: "Full Stack Development",
+      icon: FaCode,
+      technologies: [
+        { name: "HTML", icon: SiHtml5 },
+        { name: "CSS", icon: SiCss3 },
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "TypeScript", icon: SiTypescript },
+        { name: "React", icon: SiReact },
+        { name: "Next.js", icon: SiNextdotjs },
+        { name: "Django", icon: SiDjango },
+        { name: "Flask", icon: SiFlask },
+      ],
+    },
   {
     category: "Data Science & Machine Learning",
     icon: FaBrain,
@@ -46,24 +62,10 @@ const skillsData = [
       { name: "Python", icon: SiPython },
       { name: "NumPy", icon: SiNumpy },
       { name: "pandas", icon: SiPandas },
-      { name: "Matplotlib", icon: FaBrain },
+      { name: "Matplotlib", icon: FaRegChartBar },
       { name: "SciPy", icon: SiPython },
       { name: "Scikit-learn", icon: SiScikitlearn },
       { name: "Ollama", icon: SiOllama },
-    ],
-  },
-  {
-    category: "Full Stack Development",
-    icon: FaCode,
-    technologies: [
-      { name: "HTML", icon: SiHtml5 },
-      { name: "CSS", icon: SiCss3 },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "React", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Django", icon: SiDjango },
-      { name: "Flask", icon: SiFlask },
     ],
   },
   {
@@ -82,9 +84,8 @@ const skillsData = [
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
       { name: "Docker", icon: SiDocker },
-      { name: "Azure", icon: FaCloud },
+      { name: "Azure", icon: VscAzure },
       { name: "Oracle Cloud", icon: SiOracle },
-      { name: "SLURM", icon: FaServer },
       { name: "Linux", icon: SiLinux },
     ],
   },
@@ -97,6 +98,16 @@ const skillsData = [
       { name: "Figma", icon: SiFigma },
     ],
   },
+  {
+    category: "Computational Chemistry",
+    icon: FaFlask,
+    technologies: [
+      { name: "Orca", icon: FaAtom },
+      { name: "Gaussian", icon: FaAtom },
+      { name: "SLURM", icon: FaServer },
+      { name: "Avogadro", icon: SiMoleculer },
+    ],
+  }
 ];
 
 const SkillsCards = () => {
