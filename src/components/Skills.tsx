@@ -121,6 +121,7 @@ const SkillsCards = () => {
             p={6}
             boxShadow="sm"
             _hover={{ shadow: "md" }}
+            _dark={{ borderWidth: "1px"}}
           >
             <HStack mb={4} justify={"center"}>
               <Icon as={category.icon} boxSize={6} color="#4DE3AF" />
