@@ -5,9 +5,14 @@ import { ClientOnly, IconButton, Skeleton, Span } from "@chakra-ui/react"
 import { ThemeProvider, useTheme } from "next-themes"
 import type { ThemeProviderProps } from "next-themes"
 import * as React from "react"
+
+// Re-exportar explícitamente para asegurar que esté disponible
+export type { ThemeProviderProps }
 import { LuMoon, LuSun } from "react-icons/lu"
 
-export function ColorModeProvider(props: ThemeProviderProps) {
+export type ColorModeProviderProps = ThemeProviderProps
+
+export function ColorModeProvider(props: ColorModeProviderProps) {
   return (
     <ThemeProvider attribute="class" disableTransitionOnChange {...props} />
   )
@@ -15,7 +20,7 @@ export function ColorModeProvider(props: ThemeProviderProps) {
 
 export type ColorMode = "light" | "dark"
 
-export type UseColorModeReturn = {
+export interface UseColorModeReturn {
   colorMode: ColorMode
   setColorMode: (colorMode: ColorMode) => void
   toggleColorMode: () => void
@@ -44,7 +49,7 @@ export function ColorModeIcon() {
   return colorMode === "dark" ? <LuMoon /> : <LuSun />
 }
 
-type ColorModeButtonProps = Omit<IconButtonProps, "aria-label"> & {}
+type ColorModeButtonProps = Omit<IconButtonProps, "aria-label">
 
 export const ColorModeButton = React.forwardRef<
   HTMLButtonElement,
