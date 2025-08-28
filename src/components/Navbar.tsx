@@ -106,8 +106,8 @@ const Navbar = () => {
     }) => (
         <Button 
             onClick={() => {
-                onClose(); // primero cerramos el drawer
-                setTimeout(() => link.onClick(), 50); // luego hacemos scroll
+                onClose();
+                setTimeout(() => link.onClick(), 50);
             }}
             variant="ghost"
             w="full"
@@ -140,12 +140,12 @@ const Navbar = () => {
             <Box 
                 as="nav" 
                 py="4" 
-                boxShadow="sm" 
                 position="sticky" 
                 top="0" 
                 zIndex="1000"
-                bg={scrolled ? (isDark ? "gray.950" : "white") : "transparent"}
-                transition="background-color 0.3s"
+                boxShadow={scrolled ? "xs" : "none"} 
+                transition="box-shadow 0.3s"
+                bg={scrolled ? (isDark ? "black" : "white") : "transparent"}
             >
                 <Flex 
                     w={{ base: "90%", md: "85%", lg: "75%" }} 

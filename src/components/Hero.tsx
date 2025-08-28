@@ -35,7 +35,7 @@ const HeroSection = () => {
         </Text>
         <Heading
           as="h1"
-          fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
+          fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
           mb={4}
         >
