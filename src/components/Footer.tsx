@@ -60,7 +60,7 @@ const Footer = () => {
                 <Box>
                     <Text 
                         className="flex items-center text-[#4DE3AF]" 
-                        textStyle={{ base: "md", md: "lg" }} 
+                        textStyle={{ base: "sm", md: "md" }} 
                         fontWeight="semibold"
                     >
                         <Image 
