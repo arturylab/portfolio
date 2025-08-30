@@ -148,10 +148,10 @@ const Navbar = () => {
                 bg={scrolled ? (isDark ? "black" : "white") : "transparent"}
             >
                 <Flex 
-                    w={{ base: "90%", md: "85%", lg: "75%" }} 
+
                     mx="auto" 
                     align="center"
-                    px={{ base: 2, md: 0 }}
+                    px="8"
                 >
                     {/* Logo */}
                     <Link href="/" _hover={{ textDecoration: "none" }}>

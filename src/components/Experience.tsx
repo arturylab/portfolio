@@ -7,7 +7,7 @@ import {
         Highlight, 
         Link 
     } from "@chakra-ui/react"
-import { LuPresentation, LuComputer } from "react-icons/lu"
+import { LuPresentation, LuComputer, LuExternalLink } from "react-icons/lu"
 
 const Data = [
   {
@@ -90,10 +90,10 @@ const Experience = () => {
               </Timeline.Title>
               <Timeline.Description fontSize="md">
                 <Link 
-                    variant="underline" 
                     href={data.url} target="_blank" 
                     rel="noopener noreferrer"
                 >
+                    <LuExternalLink color="#4DE3AF" />
                     {data.company}
                 </Link>
               </Timeline.Description>

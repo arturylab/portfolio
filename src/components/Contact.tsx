@@ -9,7 +9,7 @@ import {
     Link,
     Separator
 } from "@chakra-ui/react";
-import {LuMail, LuGithub} from "react-icons/lu";
+import {LuMail, LuGithub, LuMapPin} from "react-icons/lu";
 import {FaLinkedin} from "react-icons/fa";
 
 const contactData = [
@@ -61,16 +61,30 @@ const Contact = () => {
         </Text>
         <HStack>
             {contactData.map((contact, index) => (
-                <Link key={index} href={contact.href} target="_blank" rel="noopener noreferrer">
-                    <Text fontSize={{ base: "sm", md: "md" }} fontWeight="semibold">
-                        <HStack mx="4">
-                            {contact.icon}
-                            <Text>{contact.label}</Text>
-                        </HStack>
+                <Link
+                key={index}
+                href={contact.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <HStack mx="4" align="center">
+                    {contact.icon}
+                    <Text as="span" fontSize={{ base: "sm", md: "md" }} fontWeight="semibold">
+                    {contact.label}
                     </Text>
+                </HStack>
                 </Link>
             ))}
         </HStack>
+        <HStack mt="8">
+            <LuMapPin size="24" color="#4DE3AF" />
+            <Text as="span" fontSize={{ base: "sm", md: "md" }} fontWeight="semibold">
+                Location:
+            </Text>
+        </HStack>
+        <Text>
+            Hermosillo, Sonora, Mexico.
+        </Text>
       </Flex>
     </Box>
   );

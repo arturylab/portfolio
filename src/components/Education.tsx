@@ -6,7 +6,7 @@ import {
         Timeline,
         Link 
     } from "@chakra-ui/react"
-import { LuAtom, LuFactory } from "react-icons/lu"
+import { LuAtom, LuFactory, LuExternalLink } from "react-icons/lu"
 
 const Data = [
   {
@@ -68,10 +68,10 @@ const Education = () => {
               </Timeline.Title>
               <Timeline.Description fontSize="md">
                 <Link 
-                    variant="underline" 
                     href={data.url} target="_blank" 
                     rel="noopener noreferrer"
                 >
+                    <LuExternalLink color="#4DE3AF" />
                     {data.university}
                 </Link>
               </Timeline.Description>
