@@ -76,7 +76,7 @@ const Certifications = () => {
             <Text color="#4DE3AF" fontSize="sm" fontStyle="italic" mt="4">
                 {certification.description}
             </Text>
-            <Link variant="underline" href={certification.link} target="_blank" rel="noopener noreferrer" mt="4">
+            <Link href={certification.link} target="_blank" rel="noopener noreferrer" mt="4">
             <LuExternalLink color="#4DE3AF" />
                 View Certificate
             </Link>
