@@ -27,7 +27,7 @@ const HeroSection = () => {
         alignItems="center"
       >
         <Text
-          mb={4}
+          mb="4"
           fontSize={{ base: "xl", md: "2xl" }}
           fontWeight="medium"
         >
@@ -37,7 +37,7 @@ const HeroSection = () => {
           as="h1"
           fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
-          mb={4}
+          mb="4"
         >
           Arturo Rentería
         </Heading>
@@ -46,7 +46,7 @@ const HeroSection = () => {
           className="text-[#4DE3AF]"
           fontSize={{ base: "xl", md: "2xl" }}
           fontWeight="medium"
-          mb={6}
+          mb="6"
         >
           Software Developer | Scientific Researcher
         </Text>
@@ -54,7 +54,7 @@ const HeroSection = () => {
         <Text
           fontSize={{ base: "md", md: "lg" }}
           maxW="800px"
-          mb={8}
+          mb="8"
         >
           Full-stack Python developer and scientific researcher specializing in Next.js and Django, 
           with expertise in cloud-based applications, databases, and high-performance computing (HPC). 
@@ -66,7 +66,9 @@ const HeroSection = () => {
         </Text>
 
         <Link href="/cv_english.pdf" download>
-          <Button>My Resume</Button>
+          <Button>
+            My Resume
+          </Button>
         </Link>
 
       </Flex>

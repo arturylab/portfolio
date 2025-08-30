@@ -1,4 +1,12 @@
-import { Box, Separator, Heading, Text, Timeline, Highlight, Link } from "@chakra-ui/react"
+import { 
+        Box,
+        Separator, 
+        Heading, 
+        Text, 
+        Timeline, 
+        Highlight, 
+        Link 
+    } from "@chakra-ui/react"
 import { LuPresentation, LuComputer } from "react-icons/lu"
 
 const Data = [
@@ -80,7 +88,15 @@ const Experience = () => {
                   {data.title}
                 </Heading>
               </Timeline.Title>
-              <Timeline.Description fontSize="md"><Link variant="underline" href={data.url} target="_blank" rel="noopener noreferrer">{data.company}</Link></Timeline.Description>
+              <Timeline.Description fontSize="md">
+                <Link 
+                    variant="underline" 
+                    href={data.url} target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    {data.company}
+                </Link>
+              </Timeline.Description>
               <Timeline.Description>{data.date}</Timeline.Description>
               <Text>
                 <Highlight

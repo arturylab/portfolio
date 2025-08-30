@@ -10,7 +10,6 @@ import {
     Flex,
     Badge,
 } from "@chakra-ui/react";
-
 import { FaCoins, FaAtom, FaKey } from "react-icons/fa";
 
 const projectsData = [
@@ -45,13 +44,13 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <Box id="projects" w={{ base: "95%", md: "75%" }} mx="auto" py={12}>
-      <Separator mb={8} />
+    <Box id="projects" w={{ base: "95%", md: "75%" }} mx="auto" py="12">
+      <Separator mb="8" />
       <Heading
         as="h2"
         fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
         fontWeight="bold"
-        mb={8}
+        mb="8"
         textAlign="center"
       >
         My Projects
@@ -61,22 +60,22 @@ const Projects = () => {
         {projectsData.map((project) => (
           <Flex
             key={project.name}
-            direction={{ base: "column", md: "row" }} // Responsive layout
+            direction={{ base: "column", md: "row" }}
             align="center"
-            gap={6}
+            gap="6"
           >
-            {/* Columna texto */}
             <Box flex="1">
-              <Heading mb={4} fontWeight="bold">
+              <Heading mb="4" fontWeight="bold">
                 <HStack>
                   {project.icon}
                   {project.name}
                 </HStack>
               </Heading>
-              <Text mb={4}>{project.description}</Text>
+              <Text mb="4">
+                {project.description}
+            </Text>
 
-              {/* Badges */}
-              <Flex wrap="wrap" gap={2} mb={4}>
+              <Flex wrap="wrap" gap="2" mb="4">
                 {project.stacks.map((stack) => (
                   <Badge key={stack} colorScheme="teal" variant="subtle">
                     {stack}
@@ -84,8 +83,7 @@ const Projects = () => {
                 ))}
               </Flex>
 
-              {/* Links */}
-              <Flex gap={4} mt={2} wrap="wrap">
+              <Flex gap="4" mt="2" wrap="wrap">
                 <Link
                   variant="underline"
                   href={project.github}
@@ -107,7 +105,6 @@ const Projects = () => {
               </Flex>
             </Box>
 
-            {/* Columna imagen */}
             <Box
               flex="1"
               display="flex"
@@ -117,7 +114,6 @@ const Projects = () => {
               <Image
                 src={project.src}
                 alt={project.name}
-                border="1px solid #f4f4f5"
                 borderRadius="md"
                 width={{ base: "100%", sm: "80%", md: "300px", lg: "400px" }}
                 objectFit="contain"

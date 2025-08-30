@@ -197,7 +197,9 @@ const Navbar = () => {
                             <Menu.Trigger className="flex justify-between items-center" asChild>
                                 <Button variant="ghost" size={{ base: "sm", md: "md" }}>
                                     <LuChevronDown />
-                                    <Text display={{ base: "none", xl: "block" }}>More</Text>
+                                    <Text display={{ base: "none", xl: "block" }}>
+                                        More
+                                    </Text>
                                 </Button>
                             </Menu.Trigger>
                             <Portal>

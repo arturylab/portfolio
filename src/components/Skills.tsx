@@ -112,41 +112,43 @@ const skillsData = [
 
 const SkillsCards = () => {
   return (
-    <Box id="skills" w={{ base: "95%", md: "75%" }} mx="auto" py={12}>
-      <Separator mb={8} />
+    <Box id="skills" w={{ base: "95%", md: "75%" }} mx="auto" py="12">
+      <Separator mb="8" />
       <Heading
           as="h1"
           fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           fontWeight="bold"
-          mb={8}
-          textAlign={"center"}
+          mb="8"
+          textAlign="center"
         >
         Tech Skills
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }}>
         {skillsData.map((category) => (
           <Box
-            m={2}
+            m="2"
             key={category.category}
             borderRadius="lg"
-            p={6}
+            p="6"
             boxShadow="sm"
             _hover={{ shadow: "md" }}
             _dark={{ borderWidth: "1px"}}
           >
-            <HStack mb={4} justify={"center"}>
-              <Icon as={category.icon} boxSize={6} color="#4DE3AF" />
+            <HStack mb="4" justify="center">
+              <Icon as={category.icon} boxSize="6" color="#4DE3AF" />
               <Heading as="h3" size="md">
                 {category.category}
               </Heading>
             </HStack>
-            <Wrap justify={"center"}>
+            <Wrap justify="center">
                 {category.technologies.map((tech) => (
                 <WrapItem key={tech.name}>
-                <HStack>
-                    <Icon as={tech.icon} boxSize={5} color="gray.500" />
-                    <Text fontSize="sm">{tech.name}</Text>
-                </HStack>
+                    <HStack>
+                        <Icon as={tech.icon} boxSize="5" color="gray.500" />
+                        <Text fontSize="sm">
+                            {tech.name}
+                        </Text>
+                    </HStack>
                 </WrapItem>
                 ))}
             </Wrap>
