@@ -67,7 +67,7 @@ const Footer = () => {
                             src="/logo.png" 
                             alt="arturylab logo" 
                             boxSize={{ base: "16px", md: "24px" }} 
-                            mr="2" 
+                            mr="1" 
                         />
                         {"< arturylab />"}
                     </Text>
