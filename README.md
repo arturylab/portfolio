@@ -3,8 +3,8 @@
 This is my personal portfolio website built with **Next.js**, **Chakra UI**, and **React Icons**.  
 It features a single-page layout with smooth scrolling, dark mode, and a mobile-friendly navigation drawer.
 
-## 🌐 Portfolio Page
-Open the web page: **[https://arturylab.dev/](https://arturylab.dev/)**
+## 💼 Portfolio Page
+Open the web page: <a href="https://arturylab.dev/" target="_blank"><strong>https://arturylab.dev/</strong></a>
 
 ## Features
 
