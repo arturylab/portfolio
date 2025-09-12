@@ -56,13 +56,13 @@ const HeroSection = () => {
           maxW="800px"
           mb="8"
         >
-          Full-stack Python developer and scientific researcher specializing in Next.js and Django, 
+          {`I'm Python, Full-stack developer and scientific researcher specializing in Next.js and Django, 
           with expertise in cloud-based applications, databases, and high-performance computing (HPC). 
           Pursuing a Ph.D. in Nanotechnology focused on computational chemistry and large-scale simulations, 
           I build scalable scientific platforms that integrate modern frontend experiences with robust backend 
           architectures. As a STEM educator with years of teaching experience at high school and university 
           levels, I am passionate about mentoring, simplifying complex concepts, and creating innovative 
-          solutions that bridge science and software development.
+          solutions that bridge science and software development.`}
         </Text>
 
         <Link href="/cv_english.pdf" download>
