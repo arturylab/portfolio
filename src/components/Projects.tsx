@@ -39,6 +39,15 @@ const projectsData = [
         github: "https://github.com/arturylab/password-generator",
         liveDemo: "https://password-generator-arturylab.vercel.app/",
         src: "/password-generator.png"
+    },
+    {
+        name: "Finance App",
+        icon: <FaCoins color="#4DE3AF"/>,
+        description: "This is a full-stack personal finance application. The backend, built with Django, offers a REST API to manage accounts, transactions, and categories with JWT authentication. The frontend, developed with Next.js and Chakra UI, consumes this API to provide an intuitive user interface for comprehensive financial tracking.",
+        stacks: ["Next.js", "TypeScript", "Django", "Django Rest Framework", "Chakra UI", "Dockploy", "Oracle Cloud"],
+        github: "https://github.com/arturylab/finance-app-frontend",
+        liveDemo: "https://finance-app.arturylab.dev/",
+        src: "/finance-app.png"
     }
 ]
 
