@@ -31,7 +31,7 @@ const HeroSection = () => {
           fontSize={{ base: "xl", md: "2xl" }}
           fontWeight="medium"
         >
-          {`HELLO, I'M`}
+          {`HOLA, SOY`}
         </Text>
         <Heading
           as="h1"
@@ -39,7 +39,7 @@ const HeroSection = () => {
           fontWeight="bold"
           mb="4"
         >
-          Arturo Rentería
+          Emanuel Arturo Rentería del Real
         </Heading>
 
         <Text
@@ -48,7 +48,7 @@ const HeroSection = () => {
           fontWeight="medium"
           mb="6"
         >
-          Software Developer | Scientific Researcher
+          Ciencias e Ingeniería (STEM) | Gestión y Operaciones (Management) | Tecnología y Desarrollo (Sistemas)
         </Text>
 
         <Text
@@ -56,13 +56,15 @@ const HeroSection = () => {
           maxW="800px"
           mb="8"
         >
-          {`I'm Python, Full-stack developer and scientific researcher specializing in Next.js and Django, 
-          with expertise in cloud-based applications, databases, and high-performance computing (HPC). 
-          Pursuing a Ph.D. in Nanotechnology focused on computational chemistry and large-scale simulations, 
-          I build scalable scientific platforms that integrate modern frontend experiences with robust backend 
-          architectures. As a STEM educator with years of teaching experience at high school and university 
-          levels, I am passionate about mentoring, simplifying complex concepts, and creating innovative 
-          solutions that bridge science and software development.`}
+          {`Perfil transdisciplinario con sólida base en Ingeniería Industrial y de Sistemas, actualmente 
+          Candidato a Doctor en Nanotecnología. Mi trayectoria integra tres pilares estratégicos: la gestión de 
+          operaciones y liderazgo de equipos en entornos comerciales y administrativos; el desarrollo de software 
+          Full Stack con enfoque en computación científica y plataformas escalables (Next.js, Django, Python); 
+          y la docencia de nivel superior en áreas STEM, especializándome en la simplificación de conceptos 
+          complejos como Matemáticas, Ciencias de la Computación e Ingeniería. Busco aportar una visión analítica 
+          y tecnológica para optimizar procesos, liderar proyectos de innovación digital o formar talento técnico 
+          especializado. Mi enfoque se centra en la convergencia de la ciencia, la eficiencia operativa y el 
+          desarrollo de herramientas tecnológicas que resuelvan retos reales del sector industrial y académico.`}
         </Text>
 
         <Link href="/cv_english.pdf" download>
