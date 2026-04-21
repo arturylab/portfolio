@@ -69,7 +69,7 @@ const HeroSection = () => {
 
         <Link href="/cv_english.pdf" download>
           <Button>
-            My Resume
+            Mi CV
           </Button>
         </Link>
 
