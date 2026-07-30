@@ -19,7 +19,7 @@ const projectsData = [
         description: "Minimalist personal financial management web application. Track expenses, manage accounts, and organize transactions with a clean and intuitive interface.",
         stacks: ["Python", "Flask", "HTML", "CSS", "JavaScript", "Bootstrap", "PostgreSQL", "Oracle Cloud"],
         github: "https://github.com/arturylab/dumpmycash",
-        liveDemo: "https://dumpmycash.demo-portal.eu/",
+        /*liveDemo: "https://dumpmycash.demo-portal.eu/",*/
         src: "/dumpmycash.png"
     },
     {
@@ -28,7 +28,7 @@ const projectsData = [
         description: "Advanced molecular cluster analysis platform for visualizing, generating, and optimizing molecular structures with 3D visualization and computational chemistry tools.",
         stacks: ["Python", "Flask", "SciPy", "Numpy", "HTML", "CSS", "JavaScript", "3Dmol.js", "Oracle Cloud"],
         github: "https://github.com/arturylab/clusterWebLab",
-        liveDemo: "https://clusterweblab.appx.ro/",
+        /*liveDemo: "https://clusterweblab.appx.ro/",*/
         src: "/clusterweblab.png"
     },
     {
@@ -46,7 +46,7 @@ const projectsData = [
         description: "This is a full-stack personal finance application. The backend, built with Django, offers a REST API to manage accounts, transactions, and categories with JWT authentication. The frontend, developed with Next.js and Chakra UI, consumes this API to provide an intuitive user interface for comprehensive financial tracking.",
         stacks: ["Next.js", "TypeScript", "Django", "Django Rest Framework", "Chakra UI", "Dockploy", "Oracle Cloud"],
         github: "https://github.com/arturylab/finance-app-frontend",
-        liveDemo: "https://finance-app.arturylab.dev/",
+        /*liveDemo: "https://finance-app.arturylab.dev/",*/
         src: "/finance-app.png"
     }
 ]
