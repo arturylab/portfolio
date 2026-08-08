@@ -4,17 +4,18 @@ import {
   Box,
   SimpleGrid,
   Heading,
-  Wrap, WrapItem,
+  Wrap,
+  WrapItem,
   Text,
   HStack,
   Icon,
-  Separator
+  Separator,
 } from "@chakra-ui/react";
 import {
   SiPython,
-  SiNumpy,
-  SiPandas,
-  SiScikitlearn,
+  SiLinux,
+  SiGit,
+  SiGoogle,
   SiHtml5,
   SiCss,
   SiJavascript,
@@ -23,115 +24,73 @@ import {
   SiNextdotjs,
   SiDjango,
   SiFlask,
-  SiLinux,
-  SiMysql,
-  SiPostgresql,
-  SiSqlite,
-  SiGit,
-  SiGithub,
-  SiDocker,
-  SiNotion,
-  SiOllama,
-  SiFigma,
-  SiMoleculer
+  SiNumpy,
 } from "react-icons/si";
-import { FaBrain, FaServer, FaCloud, FaDatabase, FaCode, FaTools, FaRegChartBar, FaFlask, FaAtom, FaSlack } from "react-icons/fa";
-import { VscAzure } from "react-icons/vsc";
+import {
+  FaBrain,
+  FaChalkboardTeacher,
+  FaBookReader,
+  FaAtom,
+  FaChartLine,
+  FaDatabase,
+  FaCode,
+  FaServer,
+} from "react-icons/fa";
 
 const skillsData = [
-    {
-      category: "Full Stack Development",
-      icon: FaCode,
-      technologies: [
-        { name: "HTML", icon: SiHtml5 },
-        { name: "CSS", icon: SiCss },
-        { name: "JavaScript", icon: SiJavascript },
-        { name: "TypeScript", icon: SiTypescript },
-        { name: "React", icon: SiReact },
-        { name: "Next.js", icon: SiNextdotjs },
-        { name: "Django", icon: SiDjango },
-        { name: "Flask", icon: SiFlask },
-      ],
-    },
   {
-    category: "Data Science & Machine Learning",
+    category: "Docencia",
+    icon: FaChalkboardTeacher,
+    technologies: [
+      { name: "Planeación didáctica", icon: FaBookReader },
+      { name: "Evaluación por competencias", icon: FaChartLine },
+      { name: "Educación presencial", icon: FaBrain },
+      { name: "Educación virtual", icon: FaCode },
+      { name: "Diseño de recursos", icon: FaBookReader },
+    ],
+  },
+  {
+    category: "Investigación",
     icon: FaBrain,
     technologies: [
+      { name: "Investigación científica", icon: FaAtom },
+      { name: "Química computacional", icon: FaAtom },
+      { name: "Análisis estadístico", icon: FaChartLine },
+      { name: "Modelación computacional", icon: FaServer },
+      { name: "Nanotecnología", icon: FaDatabase },
+    ],
+  },
+  {
+    category: "Tecnologías",
+    icon: FaCode,
+    technologies: [
       { name: "Python", icon: SiPython },
-      { name: "NumPy", icon: SiNumpy },
-      { name: "pandas", icon: SiPandas },
-      { name: "Matplotlib", icon: FaRegChartBar },
-      { name: "SciPy", icon: SiPython },
-      { name: "Scikit-learn", icon: SiScikitlearn },
-      { name: "Ollama", icon: SiOllama },
-    ],
-  },
-  {
-    category: "Database Management",
-    icon: FaDatabase,
-    technologies: [
-      { name: "MySQL", icon: SiMysql },
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "SQLite", icon: SiSqlite },
-    ],
-  },
-  {
-    category: "DevOps & Cloud",
-    icon: FaCloud,
-    technologies: [
-      { name: "Git", icon: SiGit },
-      { name: "GitHub", icon: SiGithub },
-      { name: "Docker", icon: SiDocker },
-      { name: "Azure", icon: VscAzure },
-      { name: "Oracle Cloud", icon: FaCloud },
       { name: "Linux", icon: SiLinux },
+      { name: "Git", icon: SiGit },
+      { name: "HPC", icon: FaServer },
+      { name: "HTML", icon: SiHtml5 },
+      { name: "CSS", icon: SiCss },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "React", icon: SiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Django", icon: SiDjango },
+      { name: "Flask", icon: SiFlask },
+      { name: "NumPy", icon: SiNumpy },
     ],
   },
-  {
-    category: "Work Tools",
-    icon: FaTools,
-    technologies: [
-      { name: "Notion", icon: SiNotion },
-      { name: "Slack", icon: FaSlack },
-      { name: "Figma", icon: SiFigma },
-    ],
-  },
-  {
-    category: "Computational Chemistry",
-    icon: FaFlask,
-    technologies: [
-      { name: "Orca", icon: FaAtom },
-      { name: "Gaussian", icon: FaAtom },
-      { name: "SLURM", icon: FaServer },
-      { name: "Avogadro", icon: SiMoleculer },
-    ],
-  }
 ];
 
 const SkillsCards = () => {
   return (
     <Box id="skills" w={{ base: "95%", md: "75%" }} mx="auto" py="12">
       <Separator mb="8" />
-      <Heading
-          as="h1"
-          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-          fontWeight="bold"
-          mb="8"
-          textAlign="center"
-        >
-        Tech Skills
+      <Heading as="h2" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} fontWeight="bold" mb="8" textAlign="center">
+        Habilidades
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }}>
         {skillsData.map((category) => (
-          <Box
-            m="2"
-            key={category.category}
-            borderRadius="lg"
-            p="6"
-            boxShadow="sm"
-            _hover={{ shadow: "md" }}
-            _dark={{ borderWidth: "1px"}}
-          >
+          <Box key={category.category} m="2" borderRadius="lg" p="6" boxShadow="sm" _hover={{ shadow: "md" }} _dark={{ borderWidth: "1px" }}>
             <HStack mb="4" justify="center">
               <Icon as={category.icon} boxSize="6" color="#4DE3AF" />
               <Heading as="h3" size="md">
@@ -139,16 +98,14 @@ const SkillsCards = () => {
               </Heading>
             </HStack>
             <Wrap justify="center">
-                {category.technologies.map((tech) => (
+              {category.technologies.map((tech) => (
                 <WrapItem key={tech.name}>
-                    <HStack>
-                        <Icon as={tech.icon} boxSize="5" color="gray.500" />
-                        <Text fontSize="sm">
-                            {tech.name}
-                        </Text>
-                    </HStack>
+                  <HStack>
+                    <Icon as={tech.icon} boxSize="5" color="gray.500" />
+                    <Text fontSize="sm">{tech.name}</Text>
+                  </HStack>
                 </WrapItem>
-                ))}
+              ))}
             </Wrap>
           </Box>
         ))}

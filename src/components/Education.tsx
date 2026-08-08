@@ -1,55 +1,42 @@
-import { 
-        Box,
-        Separator, 
-        Heading, 
-        Text, 
-        Timeline,
-        Link 
-    } from "@chakra-ui/react"
-import { LuAtom, LuFactory, LuExternalLink } from "react-icons/lu"
+import { Box, Separator, Heading, Text, Timeline, Link } from "@chakra-ui/react";
+import { LuAtom, LuFactory, LuExternalLink } from "react-icons/lu";
 
 const Data = [
   {
-    title: "PhD in Nanotechnology",
-    university: "Universidad de Sonora (UNISON)",
-    date: "August 2022 – July 2026 (Expected)",
+    title: "Doctorado en Nanotecnología (Candidato a doctor)",
+    university: "Universidad de Sonora",
+    date: "Agosto 2022 – Julio 2026",
     description:
-      "Postgraduate training in Nanotechnology and Materials Science and Engineering, focused on atomic structure, physical and chemical properties, and advanced methodologies for synthesis and characterization of nanostructured materials. Developed strong expertise in experimental, computational, and analytical approaches, as well as teaching and research skills aligned with academic and industrial needs.",
+      "Tesis: Propiedades estructurales, energéticas, magnéticas y electrónicas en cúmulos de nanoaleaciones binarias FenCo38-n, FenNi38-n y ConNi38-n (n <= 38) con estudios de la Teoría del Funcional de la Densidad.",
     icon: <LuAtom size="16" />,
-    url: "https://www.unison.mx//"
+    url: "https://www.unison.mx/",
   },
   {
-    title: "Master's Degree in Nanotechnology",
-    university: "Universidad de Sonora (UNISON)",
-    date: "August 2020 – July 2022",
+    title: "Maestría en Nanotecnología",
+    university: "Universidad de Sonora",
+    date: "Agosto 2020 – Julio 2022",
     description:
-      "Postgraduate training in Nanotechnology and Materials Science and Engineering, focused on atomic structure, physical and chemical properties, and advanced methodologies for synthesis and characterization of nanostructured materials. Developed strong expertise in experimental, computational, and analytical approaches, as well as teaching and research skills aligned with academic and industrial needs.",
+      "Tesis: Análisis de la superficie de energía potencial y búsqueda de estados de transición en grupos de átomos de nanoaleaciones bimetálicas Pd12Pt1.",
     icon: <LuAtom size="16" />,
-    url: "https://www.unison.mx//"
+    url: "https://www.unison.mx/",
   },
   {
-    title: "Industrial and Systems Engineering",
-    university: "Universidad de Sonora (UNISON)",
-    date: "August 2000 – May 2005",
+    title: "Ingeniería Industrial y de Sistemas",
+    university: "Universidad de Sonora",
+    date: "Agosto 2000 – Mayo 2005",
     description:
-      "Design, implement, control, and improve systems composed of people, materials, information, equipment, energy, and capital within organizations that produce goods and services, while fostering a creative and entrepreneurial attitude, and maintaining respect for individuals, the environment, and society.",
+      "Formación en sistemas, mejora de procesos, análisis organizacional y desarrollo de soluciones técnicas orientadas a la industria y a la sociedad.",
     icon: <LuFactory size="16" />,
-    url: "https://www.unison.mx//"
+    url: "https://www.unison.mx/",
   },
-]
+];
 
 const Education = () => {
   return (
     <Box id="education" w={{ base: "95%", md: "75%" }} mx="auto" py="12">
       <Separator mb="8" />
-      <Heading
-        as="h2"
-        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-        fontWeight="bold"
-        mb="8"
-        textAlign="center"
-      >
-        Education
+      <Heading as="h2" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} fontWeight="bold" mb="8" textAlign="center">
+        Formación académica
       </Heading>
       <Timeline.Root>
         {Data.map((data) => (
@@ -67,24 +54,19 @@ const Education = () => {
                 </Heading>
               </Timeline.Title>
               <Timeline.Description fontSize="md">
-                <Link 
-                    href={data.url} target="_blank" 
-                    rel="noopener noreferrer"
-                >
-                    <LuExternalLink color="#4DE3AF" />
-                    {data.university}
+                <Link href={data.url} target="_blank" rel="noopener noreferrer">
+                  <LuExternalLink color="#4DE3AF" />
+                  {data.university}
                 </Link>
               </Timeline.Description>
               <Timeline.Description>{data.date}</Timeline.Description>
-              <Text>
-                  {data.description}
-              </Text>
+              <Text>{data.description}</Text>
             </Timeline.Content>
           </Timeline.Item>
         ))}
       </Timeline.Root>
     </Box>
-  )
-}
+  );
+};
 
-export default Education
+export default Education;

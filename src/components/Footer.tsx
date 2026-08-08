@@ -37,7 +37,7 @@ const socialMedia = [
     {
         name: "Instagram",
         icon: <FaInstagram />,
-        link: "https://www.instagram.com/arturylab"
+        link: "https://www.instagram.com/turinclases/"
     },
     {
         name: "YouTube",

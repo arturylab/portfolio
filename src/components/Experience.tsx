@@ -1,77 +1,65 @@
-import { 
-        Box,
-        Separator, 
-        Heading, 
-        Text, 
-        Timeline, 
-        Highlight, 
-        Link 
-    } from "@chakra-ui/react"
-import { LuPresentation, LuComputer, LuExternalLink } from "react-icons/lu"
+import { Box, Separator, Heading, Text, Timeline, Link } from "@chakra-ui/react";
+import { LuPresentation, LuComputer, LuExternalLink } from "react-icons/lu";
 
 const Data = [
   {
     id: 1,
-    title: "University Level Teacher",
-    company: "Universidad Estatal de Sonora (UES)",
-    date: "August 2024 – December 2024",
+    title: "Profesor universitario",
+    company: "Universidad del Valle de México (UVM)",
+    date: "Febrero 2024 – Julio 2026",
     description:
-      "As a higher level teacher at this university, I taught the subjects of Integral Calculus and Numerical Methods.",
+      "Impartí, diseñé y evalué las asignaturas de Estadística Descriptiva, Métodos Numéricos, Sistemas Operativos y Modelación y Simulación de Sistemas.",
     icon: <LuPresentation size="16" />,
-    url: "https://ues.sonora.edu.mx/"
+    url: "https://www.uvm.mx/",
   },
   {
     id: 2,
-    title: "High Level Teacher",
-    company: "Colegio de Bachilleres del Estado de Sonora (COBACH)",
-    date: "August 2017 – January 2024",
+    title: "Profesor universitario",
+    company: "Universidad Estatal de Sonora (UES)",
+    date: "Agosto 2024 – Diciembre 2024",
     description:
-      "As a high school teacher at this institution, I taught the subjects of Computer Science, Mathematics, Differential and Integral Calculus, and Probability and Statistics.",
+      "Impartí y evalué Cálculo Integral y Métodos Numéricos en nivel universitario.",
     icon: <LuPresentation size="16" />,
-    url: "https://cobach.sonora.edu.mx/"
+    url: "https://www.ues.mx/",
   },
   {
     id: 3,
-    title: "University Level Teacher",
+    title: "Profesor universitario",
     company: "Instituto Tecnológico Superior de Cajeme (ITESCA)",
-    date: "August 2019 – July 2020",
+    date: "Agosto 2019 – Julio 2020",
     description:
-      "As a higher level teacher at this institution, I taught the subjects of Differential, Integral and Vector Calculus, Algorithms and Programming Languages, Properties of Materials and some subjects of Industrial Engineering.",
+      "Impartí Cálculo Diferencial, Cálculo Integral, Cálculo Vectorial, Algoritmos y Lenguajes de Programación, Propiedades de Materiales, Ingeniería de Sistemas y Seguridad e Higiene Industrial.",
     icon: <LuPresentation size="16" />,
-    url: "https://www.itesca.edu.mx/"
+    url: "https://www.itesca.edu.mx/",
   },
   {
     id: 4,
-    title: "Systems Manager",
-    company: "Secretaría de Desarrollo Social (Government of Mexico)",
-    date: "July 2013 – January 2018",
+    title: "Profesor de preparatoria",
+    company: "Colegio de Bachilleres del Estado de Sonora (COBACH)",
+    date: "Agosto 2017 – Enero 2024",
     description:
-      "Management, maintenance and support of the program's information systems. I supervised the correct functioning of the technological infrastructure (hardware, software, networks and databases), providing technical support to users and resolving incidents. I managed technological resources and generated technical and analytical reports for decision making. My role was key in the protection of data and the fulfillment of the operational objectives of the program.",
-    icon: <LuComputer size="16" />,
-    url: "https://www.gob.mx/bienestar"
+      "Impartí Informática, Geometría Analítica, Cálculo Diferencial e Integral y Probabilidad y Estadística. Además, fui encargado de Servicio Social de los estudiantes del plantel.",
+    icon: <LuPresentation size="16" />,
+    url: "https://cobach.sonora.edu.mx/",
   },
-]
-
-const keywords = [
-  "Computer Science",
-  "Algorithms and Programming Languages",
-  "program's information systems",
-  "Numerical Methods",
-  "hardware, software, networks and databases",
-]
+  {
+    id: 5,
+    title: "Responsable de Sistemas",
+    company: "Secretaría de Desarrollo Social, PROSPERA",
+    date: "Julio 2013 – Enero 2018",
+    description:
+      "Gestión, mantenimiento y soporte de los sistemas de información del programa. Supervisé el correcto funcionamiento de la infraestructura tecnológica (hardware, software, redes y bases de datos), brindando soporte técnico a los usuarios y resolviendo incidentes. Manejé recursos tecnológicos y generé informes técnicos y analíticos para la toma de decisiones. Mi rol fue clave en la protección de datos y el cumplimiento de los objetivos operativos del programa.",
+    icon: <LuComputer size="16" />,
+    url: "https://www.gob.mx/bienestar",
+  },
+];
 
 const Experience = () => {
   return (
     <Box id="experience" w={{ base: "95%", md: "75%" }} mx="auto" py="12">
       <Separator mb="8" />
-      <Heading
-        as="h2"
-        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-        fontWeight="bold"
-        mb="8"
-        textAlign="center"
-      >
-        Work Experience
+      <Heading as="h2" fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} fontWeight="bold" mb="8" textAlign="center">
+        Experiencia
       </Heading>
       <Timeline.Root>
         {Data.map((data) => (
@@ -89,29 +77,19 @@ const Experience = () => {
                 </Heading>
               </Timeline.Title>
               <Timeline.Description fontSize="md">
-                <Link 
-                    href={data.url} target="_blank" 
-                    rel="noopener noreferrer"
-                >
-                    <LuExternalLink color="#4DE3AF" />
-                    {data.company}
+                <Link href={data.url} target="_blank" rel="noopener noreferrer">
+                  <LuExternalLink color="#4DE3AF" />
+                  {data.company}
                 </Link>
               </Timeline.Description>
               <Timeline.Description>{data.date}</Timeline.Description>
-              <Text>
-                <Highlight
-                  query={keywords}
-                  styles={{ px: "0.5", bg: "rgba(77, 227, 175, 0.5)", rounded: "xs" }}
-                >
-                  {data.description}
-                </Highlight>
-              </Text>
+              <Text>{data.description}</Text>
             </Timeline.Content>
           </Timeline.Item>
         ))}
       </Timeline.Root>
     </Box>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

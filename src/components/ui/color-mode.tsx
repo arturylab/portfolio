@@ -2,20 +2,13 @@
 
 import type { IconButtonProps, SpanProps } from "@chakra-ui/react"
 import { ClientOnly, IconButton, Skeleton, Span } from "@chakra-ui/react"
-import { ThemeProvider, useTheme } from "next-themes"
-import type { ThemeProviderProps } from "next-themes"
 import * as React from "react"
-
-// Re-exportar explícitamente para asegurar que esté disponible
-export type { ThemeProviderProps }
 import { LuMoon, LuSun } from "react-icons/lu"
 
-export type ColorModeProviderProps = ThemeProviderProps
+export type ColorModeProviderProps = React.PropsWithChildren
 
-export function ColorModeProvider(props: ColorModeProviderProps) {
-  return (
-    <ThemeProvider attribute="class" disableTransitionOnChange {...props} />
-  )
+export function ColorModeProvider({ children }: ColorModeProviderProps) {
+  return <>{children}</>
 }
 
 export type ColorMode = "light" | "dark"
@@ -27,14 +20,41 @@ export interface UseColorModeReturn {
 }
 
 export function useColorMode(): UseColorModeReturn {
-  const { resolvedTheme, setTheme, forcedTheme } = useTheme()
-  const colorMode = forcedTheme || resolvedTheme
-  const toggleColorMode = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+  const [colorMode, setColorModeState] = React.useState<ColorMode>("light")
+
+  React.useEffect(() => {
+    const syncTheme = () => {
+      const root = document.documentElement
+      const isDark = root.classList.contains("dark")
+      setColorModeState(isDark ? "dark" : "light")
+    }
+
+    syncTheme()
+
+    const observer = new MutationObserver(syncTheme)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const setColorMode = (nextMode: ColorMode) => {
+    const isDark = nextMode === "dark"
+    document.documentElement.classList.toggle("dark", isDark)
+    localStorage.setItem("theme", isDark ? "dark" : "light")
+    setColorModeState(nextMode)
   }
+
+  const toggleColorMode = () => {
+    const nextMode = colorMode === "dark" ? "light" : "dark"
+    setColorMode(nextMode)
+  }
+
   return {
-    colorMode: colorMode as ColorMode,
-    setColorMode: setTheme,
+    colorMode,
+    setColorMode,
     toggleColorMode,
   }
 }

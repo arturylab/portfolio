@@ -1,26 +1,34 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Provider } from "@/components/ui/provider"
+import { Provider } from "@/components/ui/provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const title = "Portfolio | Arturo Rentería"
-const description = "This is my personal portfolio website built with Next.js + TypeScript + Chakra UI."
-const url = "https://arturylab.dev/"
-const site = "@arturylab"
+const title = "Emanuel Arturo Rentería del Real | Portafolio";
+const description = "Portafolio académico y profesional de Emanuel Arturo Rentería del Real, profesor universitario, investigador en nanotecnología y desarrollador web.";
+const url = "https://arturylab.dev/";
+const site = "@arturylab";
 
 export const metadata: Metadata = {
-  title: title,
-  description: description,
-  keywords: ["portfolio", "arturylab", "Arturo Rentería", "Python Full-Stack"],
-  authors: [{ name: "arturylab", url: url }],
+  title,
+  description,
+  keywords: [
+    "Emanuel Arturo Rentería",
+    "portafolio",
+    "nanotecnología",
+    "docencia",
+    "investigación",
+    "Python",
+    "educación superior",
+  ],
+  authors: [{ name: "Emanuel Arturo Rentería del Real", url }],
   icons: {
-    icon: "icon.png"
+    icon: "icon.png",
   },
   openGraph: {
-    title: title,
-    description: description,
-    url: url,
+    title,
+    description,
+    url,
     siteName: title,
     images: [
       {
@@ -31,14 +39,14 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
-    locale: "en_US",
+    locale: "es_MX",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: site,
-    title: title,
-    description: description,
+    site,
+    title,
+    description,
     images: [`${url}og-image.png`],
   },
 };
@@ -49,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body>
         <Provider>
           <Navbar />
