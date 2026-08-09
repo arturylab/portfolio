@@ -19,11 +19,11 @@ const HeroSection = () => {
           HOLA, SOY
         </Text>
         <Heading as="h1" fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }} fontWeight="bold" mb="4">
-          Emanuel Arturo Rentería del Real
+          Arturo del Real
         </Heading>
 
         <Text className="text-[#4DE3AF]" fontSize={{ base: "xl", md: "2xl" }} fontWeight="medium" mb="6">
-          Profesor universitario | Investigador doctoral en Nanotecnología
+          Docente e Investigador en Nanotecnología | Desarrollador de Software
         </Text>
 
         <Text fontSize={{ base: "md", md: "lg" }} maxW="850px" mb="8">
