@@ -6,9 +6,9 @@ const Data = [
     id: 1,
     title: "Profesor universitario",
     company: "Universidad del Valle de México (UVM)",
-    date: "Febrero 2024 – Julio 2026",
+    date: "Febrero 2024 – Actual",
     description:
-      "Impartí, diseñé y evalué las asignaturas de Estadística Descriptiva, Métodos Numéricos, Sistemas Operativos y Modelación y Simulación de Sistemas.",
+      "He impartido, diseñado y evaluado las asignaturas de Estadística Descriptiva, Métodos Numéricos, Sistemas Operativos y Modelación y Simulación de Sistemas, Programación Avanzada, Cálculo Vectorial, Álgebra.",
     icon: <LuPresentation size="16" />,
     url: "https://www.uvm.mx/",
   },
