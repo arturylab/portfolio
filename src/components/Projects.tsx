@@ -46,7 +46,7 @@ const projectsData = [
       "Aplicación web de Sudoku con diseño tipo videojuego, responsive y visualmente atractiva para una experiencia de usuario moderna.",
     stacks: ["JavaScript", "HTML", "CSS", "Responsive Design"],
     github: "https://github.com/arturylab/sudoku-webapp/",
-    liveDemo: "https://arturylab.github.io/sudoku-webapp/",
+    liveDemo: "https://sudoku.arturylab.dev/",
   },
 ];
 
