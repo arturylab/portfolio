@@ -17,7 +17,7 @@ const projectsData = [
     icon: <FaAtom color="#4DE3AF" />,
     description:
       "Plataforma web desarrollada para visualizar nanoestructuras y apoyar la investigación en nanotecnología mediante herramientas computacionales.",
-    stacks: ["Python", "Flask", "SciPy", "NumPy", "HTML", "CSS", "JavaScript"],
+    stacks: ["Python", "Flask", "SciPy", "NumPy", "HTML", "CSS", "JavaScript", "Oracle Cloud"],
     github: "https://github.com/arturylab/clusterWebLab/",
     liveDemo: "https://clusterweblab.arturylab.dev/",
   },
@@ -35,7 +35,7 @@ const projectsData = [
     icon: <FaCoins color="#4DE3AF" />,
     description:
       "Plataforma sencilla y clara para llevar un seguimiento de finanzas personales con una interfaz accesible y eficiente.",
-    stacks: ["Python", "Flask", "HTML", "CSS", "JavaScript", "PostgreSQL"],
+    stacks: ["Python", "Flask", "HTML", "CSS", "JavaScript", "PostgreSQL", "Oracle Cloud"],
     github: "https://github.com/arturylab/dumpmycash/",
     liveDemo: "https://dumpmycash.arturylab.dev/",
   },
