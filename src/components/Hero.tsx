@@ -23,7 +23,7 @@ const HeroSection = () => {
         </Heading>
 
         <Text className="text-[#4DE3AF]" fontSize={{ base: "xl", md: "2xl" }} fontWeight="medium" mb="6">
-          Docente e Investigador en Nanotecnología | Desarrollador de Software
+          Especialista en Ciencia y Tecnología | Docente STEM | Desarrollo Web con Python
         </Text>
 
         <Text fontSize={{ base: "md", md: "lg" }} maxW="850px" mb="8">
