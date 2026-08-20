@@ -19,7 +19,7 @@ const HeroSection = () => {
           HOLA, SOY
         </Text>
         <Heading as="h1" fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }} fontWeight="bold" mb="4">
-          Arturo del Real
+          Arturo Rentería
         </Heading>
 
         <Text className="text-[#4DE3AF]" fontSize={{ base: "xl", md: "2xl" }} fontWeight="medium" mb="6">
